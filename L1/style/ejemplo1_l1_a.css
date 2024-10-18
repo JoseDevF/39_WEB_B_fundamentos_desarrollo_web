@@ -1,0 +1,64 @@
+/* Selector universal -> Aplica a todo en la página - Comodin */
+*{
+    /* margin: 0; */
+}
+
+
+/* Selectores por nombre de elemento/etiqueta html son muy generales*/
+p{
+    font-weight: bold;
+}
+
+h1{
+    color: blueviolet;
+}
+
+
+/* Selectores de clase -> permiten agrupar elementos de manera especifica */
+.purple{
+    color: purple;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+/* Selector de ID/Identificador - Es muy especifico - Debería existir solo un elemento con dicho ID*/
+#parrafo3{
+    /* font-weight: bold; */
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkblue;
+}
+
+/* Selectores avanzados - Mezclar los 3 anteriores (nombre, clase, id) para ser muy especificos*/
+
+h1#parrafoAlt.purple.bold{
+    height: 100%;
+    width: 100%;
+    color: brown;
+    font-weight: 200;
+} 
+
+body .container p{
+    color: chocolate;
+    font-weight: 200;
+}
+
+.inline{
+    display: inline-block;
+}
+
+.container{
+/*     display: inline-block;
+ */    
+    margin-top: 10px;
+    width: 120px;
+    height: 120px;
+    /* color: purple; */
+    background-color: purple;
+}
+
+/* #caja{
+    display: block;
+}
+ */

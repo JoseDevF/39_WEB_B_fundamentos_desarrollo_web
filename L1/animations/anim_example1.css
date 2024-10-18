@@ -1,0 +1,81 @@
+/* Estilos básicos */
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.yellow-square{
+    height: 100px;
+    width: 100px;
+    background-color: #bebe1a;
+    border-radius: 25%;
+    text-align: center;
+    align-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Animación de rotación sencilla */
+.anim1 {
+    animation: rotate 2.5s infinite;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.anim2 {
+    animation: fadeIn 2s infinite;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.anim3 {
+    animation: pulsing 2s infinite;
+}
+
+@keyframes pulsing {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.anim4{
+    animation: bouncing 1s infinite;
+}
+
+@keyframes bouncing {
+    0%, 50%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-35px);
+    }
+    60%{
+        transform: translateY(-15px);
+    }
+}

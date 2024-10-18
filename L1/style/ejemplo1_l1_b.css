@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+}
+
+.purple{
+    color: purple;
+    font-weight: bold;
+}
+
+.miParrafo{
+    color: blue;
+    font-size: 35px;
+}
+
+body div p {
+
+}
+
+div.miParrafo.purple#miIdentificador {
+
+}
+
+body > div{
+
+}
+
+input[type="text"] {
+    
+}
