@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#logo{
+    height: 2rem;
+    width: 2rem;
+    background-color: #28a745;
+}
+
+#nav-buttons_container{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    height: 6rem;
+    padding: 0 2rem;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* Estilos del banner */
+.banner {
+    display: flex;
+    width: 100%;
+    height: 23rem;
+}
+
+.banner-part {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: baseline;
+    color: white;
+    font-size: 24px;
+}
+
+.left {
+    background-image: url("../assets/barist.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -12rem;
+}
+
+.right {
+    background-color: #1e3932;
+}
+
+.banner-part{
+    display: flex;
+    justify-content: end;
+}
+
+.banner-part.right{
+    padding: 0 5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.banner-part.right p{
+    padding: 1.1rem 0;
+}
+
+.banner-part.right p:first-of-type{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.banner-part.left>div{
+    height: 100%;
+}
+
+.banner-part.left>div:nth-last-of-type(odd){
+    width: 60%;
+    position: relative;
+    background-color: #1e3932;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 100%);
+}
+
+.circle{
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+#circle-1{
+    top: -4rem;
+    right: 1rem;
+    background-color: #8ec480;
+}
+
+#circle-2{
+    bottom: -3rem;
+    left: 3rem;
+    background-color: #006438;
+}
+
+#shape-slashed{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 90%;
+    height: 10rem;
+    background-image: url(../assets/shape.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#slash{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #8ec480;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 100%);
+    clip-path: polygon(0 0, 3% 0, 30% 100%, 27% 100%);
+}
+
+#starbucks-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+}

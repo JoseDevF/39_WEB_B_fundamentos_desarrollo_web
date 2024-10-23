@@ -1,0 +1,34 @@
+/* body{
+    color: blue;
+}
+
+p#p1{
+    color: green !important;
+}
+
+.caja{
+    color: red;
+} */
+
+
+#container{
+    color: green;
+}
+
+p{  /*  specificidad=1 */
+    color: blue;
+}
+
+.text{
+    color: red;
+}
+
+
+p.text{
+    color: purple;
+}
+
+
+
+
+
