@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lección 5</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <p class="mi-fuente1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi, eius?</p>
+    <p id="parrafo-alt">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    <p class="mi-fuente2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi porro quae eos voluptates nostrum. Voluptatum?</p>
+    <p class="rubik-wet-paint-regular">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, ex.</p>
+
+    <h1>Clase de Flexbox</h1>
+
+    <h2>1. Sin Flexbox (Bloques normales)</h2>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>2. Aplicando display:flex</h2>
+    <div class="container flex-container">
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+
+    <h2>3. Aplicando flex-direction</h2>
+    <div class="container flex-container flex-dir">
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+
+    <h2>4. Aplicando flex-direction:row-reverse</h2>
+    <div class="container flex-container flex-dir-row">
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+
+    <h2>5. Aplicando justify-content end</h2>
+    <div  class="container flex-container flex-end">
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+
+    <h2>6. Aplicando justify-content center</h2>
+    <div  class="container flex-container flex-center">
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+
+
+    <h2>7. Aplicando justify-content evenly</h2>
+    <div  class="container flex-container flex-evenly">
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+    </div>
+
+    <h2>8. No Aplicando flex wrap</h2>
+    <div  class="container flex-container flex-now">
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+    </div>
+
+    <h2>9. Aplicando flex wrap</h2>
+    <div  class="container flex-container flex-wrap">
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+    </div>
+
+    <h2>10. Aplicando flex grow. shrink y basis</h2>
+    <div  class="container flex-container">
+        <div class="item grow">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 5</div>
+        <div class="item shrink">Item 6</div>
+        <div class="item basis">Item 7</div>
+    </div>
+
+    <h2>10. Aplicando align self</h2>
+    <div  class="container flex-container">
+        <div class="item start">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item end">Item 6</div>
+        <div class="item center">Item 7</div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

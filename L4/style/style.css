@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+}
+
+.mi-fuente1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mi-fuente2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#parrafo-alt{
+    font-size: 36px;
+    font-family: "Rubik Wet Paint", Arial, Verdana;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rubik-wet-paint-regular {
+    font-size: 36px;
+    font-family: "Rubik Wet Paint", Arial, Verdana;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/*   body{
+    overflow-x: hidden;
+  } */
+
+.container{
+    border: 2px dashed #ccc;
+    margin-bottom: 40px;
+    padding: 10px;
+    height: 200px;
+}
+
+.item{
+    background-color: #f39c12;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin: 5px;
+    font-size: 16px;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.flex-container.flex-dir{
+    flex-direction: column;
+}
+
+.flex-container.flex-dir-row{
+    flex-direction: row-reverse;
+}
+
+.flex-container.flex-end{
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.flex-container.flex-center{
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-container.flex-evenly{
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+.flex-container.flex-now{
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.flex-container.flex-wrap{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-container .grow{
+    /* flex: 1; */
+    flex-grow: 1;
+}
+
+.flex-container .shrink{
+    /* flex: 1; */
+    flex-shrink: 1;
+}
+
+.flex-container .basis{
+    flex: 0 1 160px;
+    /* flex-shrink: 1; */
+    /* flex-basis: 160px; */
+}
+
+.flex-container .start{
+    align-self: flex-start;
+}
+
+.flex-container .center{
+    align-self: center;
+}
+
+
+.flex-container .end{
+    align-self: flex-end;
+}
