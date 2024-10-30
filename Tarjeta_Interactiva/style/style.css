@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.card-container{
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-card {
+    position: relative;
+    width: 350px; /* Ajusta el ancho de la tarjeta */
+    background-color: #ffffff;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s;
+    padding-bottom: 80px; /* Espacio para que la información adicional no se superponga con el botón */
+}
+
+.profile-card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el cursor sobre la tarjeta */
+}
+
+/* Contenedor de la imagen */
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%; /* La imagen ocupa el ancho completo del contenedor */
+    height: 240px; /* Altura fija para evitar distorsiones */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción y se ajuste al contenedor */
+}
+
+.info {
+    padding: 20px;
+    text-align: center;
+}
+
+.info h2 {
+    margin: 10px 0 5px; /* Espaciado superior e inferior del título */
+}
+
+.info p {
+    margin: 5px 0;
+    color: #555; /* Color de texto secundario para el subtítulo */
+}
+
+.more-info-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    background-color: #3cb371;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave en el cambio de color */
+}
+
+.more-info-btn:hover {
+    background-color: #2e8b57; /* Color de fondo oscuro cuando el botón es hover */
+}
+
+/* Información adicional oculta por defecto */
+.additional-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    transform: translateY(100%); /* Posiciona el contenido fuera de la vista inicial */
+    transition: transform 0.3s; /* Transición suave al mostrar/ocultar la información */
+}
+
+/* 
+
+Muestra .additional-info solo cuando el cursor está sobre el botón.
+El operador + es un combinador adyacente en CSS, que selecciona el siguiente elemento hermano inmediato.
+En este caso, aplica el estilo solo si .additional-info aparece inmediatamente después de .more-info-btn.
+Esto asegura que .additional-info solo se despliegue al hacer hover en el botón y no en otros lugares de .profile-card.
+
+*/
+.more-info-btn:hover + .additional-info {
+    transform: translateY(0); /* Despliega la información adicional en un efecto acordeón */
+}

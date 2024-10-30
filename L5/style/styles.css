@@ -1,0 +1,46 @@
+.box{
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.box1{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ff6347;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 1200px;
+    width: 600px;
+    left: 300px;
+    top: 20px;
+    /* bottom: 50px; */
+    border: 2px solid black;
+}
+
+.box2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4682B4;
+}
+
+.box3{
+    /* position: sticky;
+    top: 100px; */
+    background-color: #818181;
+    align-self: baseline;
+}
+
+.box4{
+    background-color: #3a803a;
+}

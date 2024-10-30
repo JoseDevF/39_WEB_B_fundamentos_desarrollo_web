@@ -35,6 +35,8 @@ p {
 
 /* Encabezado */
 header {
+    position: sticky;
+    top: 0;
     background-color: #fff;
     border-bottom: 1px solid #eee;
 }
