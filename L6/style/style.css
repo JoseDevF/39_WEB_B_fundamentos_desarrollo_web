@@ -1,17 +1,17 @@
-*{
+* {
     margin: 0;
     box-sizing: border-box;
 }
 
-h1{
+h1 {
     color: rgb(97, 182, 182);
 }
 
 main{
-    height: 120vh;
+    min-height: 100vh;
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,72 +20,72 @@ footer{
     padding: 25px 0;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     background-color: #333;
     padding: 1rem;
 }
 
-.nav-list{
+.nav-list {
     display: flex;
     margin: 0 15px;
     list-style: none;
 }
 
 
-.nav-list a{
+.nav-list a {
     color: #fff;
     text-decoration: none;
 }
 
-.nav-list li{
+.nav-list li {
     margin-inline-end: 15px;
 }
 
-.main-section-footer{
+.main-section-footer {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
 }
 
-.footer-section{
+.footer-section {
     text-align: center;
 }
 
-.footer-section ul{
+.footer-section ul {
     padding: 0;
     list-style: none;
 }
 
-.icon-social{
+.icon-social {
     width: 32px;
     height: 32px;
     background-size: cover;
 }
 
-.icon-facebook{
+.icon-facebook {
     background-image: url("https://img.icons8.com/?size=100&id=118467&format=png&color=000000");
 }
 
-.icon-insta{
+.icon-insta {
     background-image: url("https://img.icons8.com/?size=100&id=32292&format=png&color=ffffff");
     border-radius: 50%;
 }
 
-.icons{
+.icons {
     display: flex;
     justify-content: space-evenly;
 }
 
-.copy-right{
+.copy-right {
     width: 100%;
     margin-top: 20px;
     padding: 15px 90px;
     border-top: 1px solid white;
 }
 
-.burger-icon{
+.burger-icon {
     display: none;
     width: 32px;
     height: 32px;
@@ -93,12 +93,108 @@ footer{
     background-size: cover;
 }
 
-@media (width <= 820px) {
-    .burger-icon{
+@media (width <=820px) {
+    .burger-icon {
         display: inline-block;
     }
 
-    .nav-list li{
+    .nav-list li {
         display: none;
+    }
+}
+
+
+/* Media queries para footer */
+@media (width <=600px) {
+    .main-section-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        flex: 1 1 100%;
+        /* Toma todo el ancho disponible */
+    }
+
+    .copy-right {
+        text-align: center;
+        /* Centrar el texto en pantallas pequeñas */
+    }
+}
+
+
+/* Ejercicio */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #3498db;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 20px);
+        background-color: #174e74;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 1 1 100%;
+        background-color: #34db66;
+
+    }
+}
+
+/* Ejemplo boton de ayuda */
+.help-button {
+    position: fixed;
+    bottom: 20px; /* Distancia desde el fondo */
+    right: 20px; /* Distancia desde el borde derecho */
+    z-index: 1000; /* Para que quede por encima de otros elementos */
+}
+
+.help-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px; /* Tamaño del botón */
+    height: 50px;
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 24px; /* Tamaño del ícono o texto */
+    border-radius: 50%; /* Forma circular */
+    text-decoration: none; /* Sin subrayado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+    transition: background-color 0.3s, transform 0.3s; /* Efectos */
+}
+
+.help-icon:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el cursor */
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}
+
+/* Media query para dispositivos pequeños */
+@media (max-width: 600px) {
+    .help-button {
+        bottom: 10px; /* Ajuste de distancia */
+        right: 10px;
+    }
+
+    .help-icon {
+        width: 40px; /* Reducción de tamaño */
+        height: 40px;
+        font-size: 20px;
     }
 }
