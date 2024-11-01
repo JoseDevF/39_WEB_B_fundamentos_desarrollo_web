@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: rgb(97, 182, 182);
+}
+
+main{
+    height: 120vh;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: rgb(219, 219, 219);
+    padding: 25px 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 1rem;
+}
+
+.nav-list{
+    display: flex;
+    margin: 0 15px;
+    list-style: none;
+}
+
+
+.nav-list a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-list li{
+    margin-inline-end: 15px;
+}
+
+.main-section-footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.footer-section{
+    text-align: center;
+}
+
+.footer-section ul{
+    padding: 0;
+    list-style: none;
+}
+
+.icon-social{
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+}
+
+.icon-facebook{
+    background-image: url("https://img.icons8.com/?size=100&id=118467&format=png&color=000000");
+}
+
+.icon-insta{
+    background-image: url("https://img.icons8.com/?size=100&id=32292&format=png&color=ffffff");
+    border-radius: 50%;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.copy-right{
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px 90px;
+    border-top: 1px solid white;
+}
+
+.burger-icon{
+    display: none;
+    width: 32px;
+    height: 32px;
+    background-image: url("https://img.icons8.com/?size=100&id=36389&format=png&color=ffffff");
+    background-size: cover;
+}
+
+@media (width <= 820px) {
+    .burger-icon{
+        display: inline-block;
+    }
+
+    .nav-list li{
+        display: none;
+    }
+}
