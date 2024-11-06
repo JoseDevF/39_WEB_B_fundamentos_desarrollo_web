@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    margin: 20px 0;
+}
+
+h2{
+    margin: 30px 0;
+}
+
+.grid-example-1{
+    display: grid;
+    grid-template-columns: 1fr 5fr 6fr;
+    gap: 10px;
+    border: 2px solid #333;
+}
+
+.grid-example-1 .grid-item:nth-child(odd){
+    background-color: pink;
+}
+
+.grid-example-1 .grid-item:nth-child(even){
+    background-color: cadetblue;
+}
+
+.grid-example-2{
+    display: grid;
+   /*  grid-template-columns: repeat(12, 1fr); */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas, cada una con un tamaño igual equivalente a 1fr */
+    grid-template-rows: 100px; /* 1 fila de tamaño 100 px */
+   /*  grid-template-rows: repeat(12, 50px); */
+    gap: 15px;
+    border: 2px solid #333;
+}
+
+.grid-example-2 .grid-item:nth-child(odd){
+    color: white;
+    background-color: green;
+}
+
+.grid-example-2 .grid-item:nth-child(even){
+    color: white;
+    background-color: purple;
+}
+
+.grid-example-3{
+    display: grid;
+    grid-template-columns: 200px 1fr 100px;
+    grid-template-rows: auto 100px;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.grid-example-3 .grid-item:nth-child(odd){
+    color: white;
+    background-color: orangered;
+}
+
+.grid-example-3 .grid-item:nth-child(even){
+
+    background-color: grey;
+}

@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --card_width: 15rem;
+    --row_increment: 0.625rem;
+    --card_border_radius: 1rem;
+    --card_small:26;
+    --card_medium:33;
+    --card_large:45;
+}
+
+main{
+    height: 100vh;
+    width: 100%;
+}
+
+nav{
+    height: 5rem;
+    background-color: brown;
+    display: flex;
+}
+
+.navbar_botones_navegacion{
+    width: 16rem;
+    background-color: purple;
+}
+
+.navbar_busqueda{
+    flex-grow: 1;
+    min-width: 3rem;
+    background-color: green;
+    display: flex;
+    align-items: center;
+}
+
+.navbar_busqueda svg{
+    height: 1rem;
+    margin: auto 15px;
+}
+
+.navbar_busqueda input{
+    height: 3rem;
+    flex-grow: 1;
+    margin-inline-end: 1rem;
+    margin-inline-start: 0.3rem;
+    background-color: transparent;
+    border-style: none;
+}
+
+.navbar_busqueda input:focus-visible{
+    outline: none;
+}
+
+.navbar_busqueda_input{
+    display: flex;
+    flex-grow: 1;
+    background-color: #f0f0f0;
+    border-radius: 30px;
+    margin: 0 20px;
+}
+
+.navbar_botones_usuario{
+    width: 13rem;
+    background-color: orange;
+}
+
+.pin_contenedor{
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--card_width));
+    grid-auto-rows: var(--row_increment);
+    justify-content: center;
+    background-color: black;
+   
+}
+
+.tarjeta{
+    position: relative;
+    padding: 0;
+    margin: 15px 10px;
+    border-radius: var(--card_border_radius);
+    background-color: crimson;
+}
+
+.tarjeta_s{
+    grid-row-end: span var(--card_small)
+}
+
+.tarjeta_m{
+    grid-row-end: span var(--card_medium)
+}
+
+.tarjeta_l{
+    grid-row-end: span var(--card_large)
+}
+
+
+
+/* Mascara */
+
+.tarjeta_contenido {
+    width: 100%;
+    height: 100%;
+    padding-top: 0.5rem;
+    position: absolute;
+    text-align: center;
+    background-color: crimson;
+    border-radius: var(--card_border_radius);
+}
+
+.tarjeta_botones {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.493);
+    color: white;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: var(--card_border_radius);
+}
+
+.tarjeta_botones p{
+    background-color: gray;
+    text-align: center;
+}
+
+.tarjeta_botones:hover {
+    opacity: 1;
+}
+
+
+
+
+/* Anexo: ejemplo para position absolute */
+/* Caso 1: Padre con position absolute */
+.padre-absolute {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 300px;
+    height: 300px;
+    background-color: lightblue;
+    border: 2px solid navy;
+}
+
+/* Caso 2: Padre con hijo con position absolute */
+.padre-relative {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+    background-color: lightgreen;
+    border: 2px solid darkgreen;
+}
+
+.hijo-absolute {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    border: 2px solid darkred;
+}
+
+/* Caso 3: Nieto con position absolute */
+.hijo-relative {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: lightyellow;
+    border: 2px solid goldenrod;
+    margin: auto;
+}
+
+.nieto-absolute {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: lightcoral;
+    border: 2px solid darkred;
+}
+
+
+
+/* Anexo: REM vs EM */
+
+html {
+    font-size: 16px; /* Base para `rem` */
+}
+
+.container {
+    margin: 20px;
+    font-size: 40px;
+}
+
+/* Unidades de tamaño de fuente */
+.px-size {
+    font-size: 24px; /* Tamaño absoluto de 24 píxeles */
+}
+
+.em-size {
+    font-size: 1.5em; /* 1.5 veces el tamaño de la fuente del elemento padre (16px * 1.5 = 24px) */
+}
+
+.rem-size {
+    font-size: 1.5rem; /* 1.5 veces el tamaño de la fuente base del `html` (16px * 1.5 = 24px) */
+}
